@@ -306,6 +306,7 @@ public class StkAppService extends Service implements Runnable {
                 if (mMainCmd == null) {
                     StkAppInstaller.unInstall(mContext);
                 }
+                mStkService.sendSTKInitCompleted();
                 break;
             case OP_DELAYED_MSG:
                 handleDelayedCmd();
